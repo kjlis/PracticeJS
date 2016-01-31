@@ -1,0 +1,21 @@
+@import "reset"
+
+$myVar: red
+@mixin position-block($position, $top, $right, $bottom, $left, $z_index: 0)
+  position: $position
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+  z-index: $z_index
+
+body
+  background-color: #0e4474
+  div
+    color: #880000
+    &+div
+    color: pink
+    &.hidden
+    display: none
+    color: $myVar
+    @include position-block(absolute, 0, 0, 0, 10)
