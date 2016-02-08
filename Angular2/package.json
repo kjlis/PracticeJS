@@ -1,0 +1,37 @@
+{
+  "name": "nostra-client",
+  "version": "1.0.0",
+  "description": "UI client for Nostra app.",
+  "main": "app.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjlis/nostra.git"
+  },
+  "author": "Krzysztof Lis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjlis/nostra/issues"
+  },
+  "homepage": "https://github.com/kjlis/nostra#readme",
+  "dependencies": {
+    "angular2": "2.0.0-beta.3",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "^0.19.20",
+    "zone.js": "0.5.11"
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0",
+    "gulp-typescript": "^2.10.0",
+    "lite-server": "^2.0.1",
+    "typescript": "^1.7.5"
+  }
+}
