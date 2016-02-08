@@ -1,0 +1,3 @@
+#Compiled JS files
+app/*.js
+app/*.js.*

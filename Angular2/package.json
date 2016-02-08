@@ -1,7 +1,7 @@
 {
-  "name": "nostra-client",
+  "name": "angular2-practice",
   "version": "1.0.0",
-  "description": "UI client for Nostra app.",
+  "description": "Example app ina Angular 2",
   "main": "app.js",
   "scripts": {
     "tsc": "tsc",
