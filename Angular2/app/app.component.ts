@@ -1,9 +1,10 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
-import {CrisisListComponent} from "./crisis-list.component";
 import {HeroListComponent} from "./heroes/hero-list.component";
 import {HeroService} from "./heroes/hero.service";
 import {HeroDetailComponent} from "./heroes/hero-detail.component";
+import {CrisisCenterComponent} from "./crisis-center/crisis-center.component";
+import {DialogService} from "./dialog.service";
 
 @Component({
     selector: 'my-app',
@@ -16,13 +17,14 @@ import {HeroDetailComponent} from "./heroes/hero-detail.component";
         <router-outlet></router-outlet>
     `,
     directives: [ROUTER_DIRECTIVES],
-    providers: [HeroService]
+    providers: [HeroService, DialogService]
 })
 @RouteConfig([
     {
-        path: '/crisis-center',
+        path: '/crisis-center/...',
         name: 'CrisisCenter',
-        component: CrisisListComponent
+        component: CrisisCenterComponent,
+        useAsDefault: true
     },
     {
         path: '/heroes',
